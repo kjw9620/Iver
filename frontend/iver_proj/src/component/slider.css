@@ -26,6 +26,7 @@
 
 .ISP {
     display: inline-block;
+    cursor:pointer;
 
     width: 8px;
     height: 8px;
