@@ -1,0 +1,35 @@
+:root {
+    --color-blue: #e6e6e6;
+    --color-deepBlue: black;
+    --color-bg: white;
+}
+
+html,body {
+    height: 100%;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.all {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    height: 200%;
+    border-radius: 8px;
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+    border-top: 8px solid var(--color-blue);
+    border-left: 8px solid var(--color-blue);
+    border-bottom: 8px solid var(--color-deepBlue);
+    border-right: 8px solid var(--color-deepBlue);
+
+    background-color: var(--color-bg);
+}
