@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Navigation/>
-      <Slider/>
+      <Navigation className="zIndex_2"/>
+      <Slider className="zIndex_1"/>
     </div>
   );
 }

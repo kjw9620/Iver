@@ -11,6 +11,7 @@ import banner6 from '../image/bannerImage_6.jpg'
 class Slider extends React.Component {
 
     componentDidMount (){
+        console.log("this.componentDidMount");
         this.Interval();
         const dot = document.getElementById('dot');
         dot.childNodes[0].style.backgroundColor = 'red';
@@ -26,41 +27,22 @@ class Slider extends React.Component {
     }
 
     Interval = () => {
-        this.state.timer = setTimeout(this.Interval, this.state.slideShowTimer)
+        this.state.timer = setTimeout(this.Interval, 3000);
+        this.dotMove();
         this.push();
-        this.dotPush();
     }
 
-    dotPush = () => {
+    dotMove = () => {
         const dot = document.getElementById('dot');
 
         if(dot.childNodes[this.state.dot_position] != undefined){
-            let dotPos = this.state.dot_position;
-           
-            if(dotPos < 4){
-                dot.childNodes[dotPos].style.backgroundColor = 'red';
-                dot.childNodes[this.state.preventDot].style.backgroundColor = 'black';
-
-                this.setState({
-                    preventDot: dotPos
-                });
-
-                dotPos = this.state.dot_position+1;
-            }
-            if(dotPos == 4) {
-                dotPos = 0;
-                this.setState({
-                    dot_position: 0
-                });
-            }
-                
-            this.setState({
-                dot_position: dotPos
-            });
+            dot.childNodes[this.state.dot_position].style.backgroundColor = 'red';
+            dot.childNodes[this.state.preventDot].style.backgroundColor = 'black';
         }
     }
 
     push = () => {
+        console.log("push");
         let pos = this.state.pos;
         
         if(pos >= -((this.state.imgList.length-4)*16.66)){
@@ -73,25 +55,14 @@ class Slider extends React.Component {
                 pos: 0
             });
         }
+
+        // dot move - push
+        let dot_position = this.state.dot_position;
+        this.setState({ preventDot: dot_position });
+        if( dot_position+1 == 4) { dot_position = 0; }
+        else { dot_position = dot_position+1; }
+        this.setState({ dot_position: dot_position });
     }
-
-    pull = () => {
-        let pos = this.state.pos;
-        
-        if(pos <= (this.state.imgList.length-7)*16.66){
-            this.setState({
-                pos: pos + 16.66
-            });
-
-        }
-        else {
-            pos = (this.state.imgList.length-3) * 16.66
-            this.setState({
-                pos: -pos
-            });
-        }
-        console.log(this.state.pos);
-    }    
 
     render() {
 
@@ -101,7 +72,7 @@ class Slider extends React.Component {
         }
 
         return(
-            <div>
+            <div className="ss">
                 <div className='slider'>
                     <div className='content' style={style}>
                         <img className='img' src={this.state.imgList[0]} alt="banner1"/>
