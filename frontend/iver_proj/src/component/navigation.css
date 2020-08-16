@@ -13,30 +13,32 @@
     width: 10%;
     height: 90px;
     text-align: center;
+    vertical-align: middle;
 
     color: white;
     list-style: none;
 
 }
 
-.gnb:hover {
+.gnb:hover .hidden{
     color: grey;
+    visibility: visible;
 }
 
 .status {
     background-color: white;
     width: 100%;
-    height: 2px;
+    height: 3px;
 
     border-radius: 4px;
 
     margin: auto;
-    margin-top: 16px;
+    margin-top: 8px;
 }
 
 a{
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 35px;
     font-size: 13px;
 }
 
@@ -47,7 +49,7 @@ a{
     height: 0;
     text-align: center;
 
-    margin-top: 15px;
+    margin-top: 17px;
 
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
@@ -68,38 +70,56 @@ a{
     min-height: 100px;
 }
 
-.hidden {
-    visibility: hidden;
+.dropContent {
+    display: block;
+    cursor: pointer;
+    margin: 0;
+    padding: 10px 10px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 900;
 }
 
-.brand:hover ~ .hidden{
-    visibility: visible;
+.dropForm {
+    width: 150px;
+    height: auto;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .hidden:hover {
     visibility:  visible;
 }
 
-.trand {
+.drop-brand {
+    display: flex;
     cursor: auto;
+
+    width: fit-content;
+    margin: 0 auto;
 }
 
-.dropContent {
+.drop-shopping {
+    display: flex;
+    cursor: auto;
 
-    width: 5%;
-    cursor: pointer;
-    display: block;
-    margin: 0;
-    padding: 5px 5px;
-    text-align: left;
-    font-size: 15px;
-    font-weight: 900;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.brand:hover ~.hidden{
+    visibility: visible;
 }
 
 li{
     list-style: none;
 }
 
+.verticalLine {
+    border-right: 1px solid black;
+}
+
 a:link { color: red;text-decoration: none;}
 a:visited { color: black; text-decoration: none;}
-a:hover { color: black; text-decoration: underline;}
