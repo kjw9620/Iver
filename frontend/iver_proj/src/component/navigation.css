@@ -20,9 +20,8 @@
 
 }
 
-.gnb:hover .hidden{
+.gnb:hover {
     color: grey;
-    visibility: visible;
 }
 
 .status {
@@ -33,12 +32,12 @@
     border-radius: 4px;
 
     margin: auto;
-    margin-top: 8px;
+    margin-top: 9px;
 }
 
 a{
     display: inline-block;
-    margin-top: 35px;
+    margin-top: 34px;
     font-size: 13px;
 }
 
@@ -89,7 +88,7 @@ a{
     visibility: hidden;
 }
 
-.hidden:hover {
+.dropDownMenu:hover {
     visibility:  visible;
 }
 
@@ -110,6 +109,10 @@ a{
 }
 
 .brand:hover ~.hidden{
+    visibility: visible;
+}
+
+.shopping:hover ~.hidden{
     visibility: visible;
 }
 

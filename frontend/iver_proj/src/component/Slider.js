@@ -42,7 +42,6 @@ class Slider extends React.Component {
     }
 
     push = () => {
-        console.log("push");
         let pos = this.state.pos;
         
         if(pos >= -((this.state.imgList.length-4)*16.66)){

@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Navigation className="zIndex_2"/>
+      <Navigation pageMove="홈" className="zIndex_2"/>
       <Slider className="zIndex_1"/>
     </div>
   );

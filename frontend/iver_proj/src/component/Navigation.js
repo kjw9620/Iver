@@ -3,44 +3,66 @@ import './navigation.css'
 
 class Navigation extends React.Component{
 
+    state = {
+        onMouse: 0
+    }
+
+    triangle_hidden = () => {
+        console.log("triangle hidden");
+        this.setState({
+            onMouse: 0
+        });
+    }
+
+    triangle_visible = (ele) => {
+        console.log("triangle visible");
+        console.log(ele.target);
+        console.log(ele.target.classList[0]);
+
+        console.log(this.props.pageMove);
+
+        const pos = parseInt(ele.target.classList[0]);
+
+        this.setState({
+            onMouse: pos
+        });
+    }
+
     render() {
-
-        console.log("rendering!");
-
         return(
-            <div className="Navigation">
-                <li key='홈' className='gnb'><a>
+            <div className="Navigation" onMouseLeave={this.triangle_hidden}>
+                <li key='홈' className='gnb' onMouseEnter={this.triangle_visible}><a>
                     <span>홈</span>
-                    <div className='status'></div>
+                    <div style={{visibility: this.props.pageMove=="홈"? "visible" : "hidden" }} className='status'></div>
                 </a></li>
 
-                <li key='브랜드' className='gnb brand'><a>
+                <li key='브랜드' className='1 gnb brand' onMouseEnter={this.triangle_visible}><a className='1'>
                     <span>브랜드</span>
-                    <div className='status'></div>
-                    <div className='triangle-up hidden'></div>
+                    <div style={{visibility: this.props.pageMove=="브랜드"? "visible" : "hidden" }} className='1 status'></div>
+                    <div style={{visibility: this.state.onMouse == 1 ? "visible":"hidden"}} className='1 triangle-up'></div>
                 </a></li>
 
-                <li key='쇼핑몰' className='gnb'><a>
-                    <span>쇼핑몰</span>
-                    <div className='status'></div>
-                    <div className='triangle-up hidden'></div>
+                <li key='쇼핑몰' className='2 gnb shopping' onMouseEnter={this.triangle_visible}><a className="2">
+                    <span>쇼핑몰</span> 
+                    <div style={{visibility: this.props.pageMove=="쇼핑몰"? "visible" : "hidden"}}  className='status'></div>
+                    <div style={{visibility: this.state.onMouse == 2 ? "visible":"hidden"}} className='2 triangle-up hidden'></div>
                 </a></li>
 
-                <li key='그루밍' className='gnb'><a>
+                <li key='그루밍' className='3 gnb' onMouseEnter={this.triangle_visible}><a className="3">
                     <span>그루밍</span>
-                    <div className='status'></div>
-                    <div className='triangle-up hidden'></div>
+                    <div  style={{visibility: this.props.pageMove=="그루밍"? "visible" : "hidden"}} className='status'></div>
+                    <div style={{visibility: this.state.onMouse == 3 ? "visible":"hidden"}} className='3 triangle-up hidden'></div>
                 </a></li>
 
-                <li key='하이앤드' className='gnb'><a>
+                <li key='하이앤드' className='gnb' onMouseEnter={this.triangle_visible}><a>
                     <span>하이앤드</span>
                 </a></li>
 
-                <li key='이벤트' className='gnb'><a>
+                <li key='이벤트' className='gnb' onMouseEnter={this.triangle_visible}><a>
                     <span>이벤트</span>
                 </a></li>
 
-                <li key='스토어' className='gnb'><a>
+                <li key='스토어' className='gnb' onMouseEnter={this.triangle_visible}><a>
                     <span>스토어</span>
                 </a></li>
 
@@ -106,7 +128,6 @@ class Navigation extends React.Component{
                     </div>
                     
                 </div>
-                
             </div>
         )
     }
