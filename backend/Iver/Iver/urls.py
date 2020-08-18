@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from rest_framework import routers
-from Iver_user import views
+from Iver_user import views as UserView
 
 # router = routers.DefaultRouter()
 # router.register('user', views.UserView, 'user')
@@ -24,5 +24,6 @@ from Iver_user import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('api/', include(router.urls) ),
-    path('users/', include('Iver_user.urls'), name = "Iver_user")
+    path('users/', include('Iver_user.urls'), name = "Iver_user"),
+    path('categories/',include('Brand.urls'), name = "Brand")
 ]

@@ -1,7 +1,5 @@
 from django.urls import path
-from .views import UserView
-
-app_name = 'Iver_user'
+from . import views
 urlpatterns = [
-    path('', UserView.as_view()),
+    path('', views.home)
 ]

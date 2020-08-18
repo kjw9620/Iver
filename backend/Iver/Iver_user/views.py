@@ -5,7 +5,11 @@ from rest_framework.response import Response
 from .serializers import UserSerializer
 from .models import User
 from django.contrib.auth.hashers import make_password, check_password
+from django.http import HttpResponse
 # Create your views here.
+
+def home(reqeust):
+    return HttpResponse("Home!")
 
 def register(request):
     if request.method == "POST":
