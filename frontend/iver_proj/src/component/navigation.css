@@ -122,6 +122,8 @@ li{
 
 .verticalLine {
     border-right: 1px solid black;
+
+    margin-right: 8%;
 }
 
 a:link { color: red;text-decoration: none;}

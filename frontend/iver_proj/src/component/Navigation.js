@@ -70,7 +70,7 @@ class Navigation extends React.Component{
                     <div className="drop-brand">
                         <ul className="dropForm verticalLine">
                             <li>
-                                <b><a className="dropContent" href="#">베스트</a></b>
+                                <strong><a className="dropContent" href="#">베스트</a></strong>
                                 <b><a className="dropContent" href="#">신상</a></b>
                                 <b><a className="dropContent" href="#">세일</a></b>
                             </li>
@@ -113,16 +113,6 @@ class Navigation extends React.Component{
                                 <a className="dropContent" href="#">청바지</a>
                                 <a className="dropContent" href="#">반바지</a>
                                 <a className="dropContent" href="#">트레이닝/조거팬츠</a>
-                            </li>
-                        </ul>
-                        <ul className="dropForm">
-                            <li>
-                                <b><a className="dropContent" href="#">신발</a></b>
-                                <a className="dropContent" href="#">운동화</a>
-                                <a className="dropContent" href="#">스니커즈</a>
-                                <a className="dropContent" href="#">구두/로퍼</a>
-                                <a className="dropContent" href="#">부츠/워커</a>
-                                <a className="dropContent" href="#">샌들/슬리퍼</a>
                             </li>
                         </ul>
                     </div>
