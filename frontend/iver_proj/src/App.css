@@ -9,13 +9,3 @@ html,body {
 .App {
     width: 100%;
 }
-
-.zIndex_2{
-    position: relative;
-    z-index: 2;
-}
-
-.zIndex_1{
-    position: relative;
-    z-index: 1;
-}

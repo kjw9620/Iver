@@ -1,0 +1,19 @@
+.bestProduct_bg {
+    width: 70%;
+    min-height: 200px;
+    border: 1px solid black;
+    margin: 20px auto;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: normal;
+    margin-right: 0;
+}
+
+.detail {
+    float: right;
+    vertical-align: baseline;
+    margin-top: 20px;
+}

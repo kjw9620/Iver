@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './component/Header';
 import Navigation from './component/Navigation';
 import Slider from './component/Slider'
+import BestProduct from './component/BestProduct'
 import './App.css'
 
 
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
       <Header/>
       <Navigation pageMove="홈" className="zIndex_2"/>
-      <Slider className="zIndex_1"/>
+      <Slider/>
+      <BestProduct categori="브랜드"/>
     </div>
   );
 }
