@@ -24,6 +24,6 @@ from Iver_user import views as UserView
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('api/', include(router.urls) ),
-    path('users/', include('Iver_user.urls'), name = "Iver_user"),
+    path('user/', include('Iver_user.urls'), name = "Iver_user"),
     path('categories/',include('Brand.urls'), name = "Brand")
 ]

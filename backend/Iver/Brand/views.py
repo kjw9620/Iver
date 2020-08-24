@@ -21,3 +21,15 @@ class IndexView(View):
 
     def delete(self, request):
         return HttpResponse('delete')
+
+
+def Clothes_detail(request, number):
+    clothes = Clothes.objects.get(categories=number)
+    data = json.loads(serialize('json', clothes))
+    return JsonResponse({'clothes' : data})
+
+def Clothes_kind(request, kind):
+    clothes = Clothes.objects.filter()
+    data = json.loads(serialize('json', clothes))
+            
+    return HttpResponse(data)
