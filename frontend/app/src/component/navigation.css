@@ -1,0 +1,130 @@
+.Navigation {
+    display: inline-block;
+    width: 100%;
+    height: 90px;
+    margin: 0px;
+    background-color: black;
+
+    text-align: center;
+}
+
+.gnb {
+    display: inline-block;
+    width: 10%;
+    height: 90px;
+    text-align: center;
+    vertical-align: middle;
+
+    color: white;
+    list-style: none;
+
+}
+
+.gnb:hover {
+    color: grey;
+}
+
+.status {
+    background-color: white;
+    width: 100%;
+    height: 3px;
+
+    border-radius: 4px;
+
+    margin: auto;
+    margin-top: 9px;
+}
+
+a{
+    display: inline-block;
+    margin-top: 34px;
+    font-size: 13px;
+}
+
+.triangle-up {
+    
+    display: inline-block;
+    width: 0;
+    height: 0;
+    text-align: center;
+
+    margin-top: 17px;
+
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid white;
+    
+}
+
+.dropDownMenu {
+    position: absolute;
+
+    background-color: white;
+
+    opacity: 90%;
+
+    z-index: 3;
+    width: 100%;
+    height: fit-content;
+    min-height: 100px;
+}
+
+.dropContent {
+    display: block;
+    cursor: pointer;
+    margin: 0;
+    padding: 10px 10px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.dropForm {
+    width: 150px;
+    height: auto;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.dropDownMenu:hover {
+    visibility:  visible;
+}
+
+.drop-brand {
+    display: flex;
+    cursor: auto;
+
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.drop-shopping {
+    display: flex;
+    cursor: auto;
+
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.brand:hover ~.hidden{
+    visibility: visible;
+}
+
+.shopping:hover ~.hidden{
+    visibility: visible;
+}
+
+li{
+    list-style: none;
+}
+
+.verticalLine {
+    border-right: 1px solid black;
+
+    margin-right: 8%;
+}
+
+a:link { color: red;text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
