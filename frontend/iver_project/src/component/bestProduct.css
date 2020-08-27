@@ -1,5 +1,5 @@
 .bestProduct_bg {
-    width: 70%;
+    width: 65%;
     min-height: 200px;
     margin: 20px auto;
 }
@@ -13,14 +13,21 @@ h1 {
 
 .list_full {
     display: flex;
-    justify-content: space-between;
+    flex-direction : row;
+    flex-wrap : wrap;
+    align-items: stretch;
+}
+
+.list_full > a {
+    vertical-align: super;
 }
 
 .list_full > ul {
     display: inline-block;
     padding: 0;
-    width: 22%;
-    
+    width: 19%;
+
+    margin: 5px 0.5%;   
 }
 
 .detail {
