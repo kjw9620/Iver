@@ -113,7 +113,7 @@ class Navigation extends React.Component{
                                 <b><a className="dropContent" href="#">상의</a></b>
                                 <Link className="dropContent" to={"/brand/top/shortSleeve"}>반팔티/7부티</Link>
                                 <Link className="dropContent" to={"/brand/top/longSleeve"}>긴팔티</Link>
-                                <Link className="dropContent" to={"/brand/top/zipUp"}>후드티/집업</Link>
+                                <Link className="dropContent" to={"/brand/top/hood"}>후드티/집업</Link>
                                 <a className="dropContent" href="#">맨투맨</a>
                                 <a className="dropContent" href="#">니트/폴라티</a>
                             </li>
@@ -121,9 +121,9 @@ class Navigation extends React.Component{
                         <ul className="dropForm">
                             <li onClick={this.pageMove}>
                                 <b><a className="dropContent" href="#">셔츠</a></b>
-                                <Link className="dropContent" to={"/brand/shirts/basic"}>기본</Link>
-                                <Link className="dropContent" to={"/brand/shirts/check"}>체크</Link>
-                                <Link className="dropContent" to={"/brand/shirts/Denim"}>데님</Link>
+                                <Link className="dropContent" to={"/brand/shirt/basic"}>기본</Link>
+                                <Link className="dropContent" to={"/brand/shirt/check"}>체크</Link>
+                                <Link className="dropContent" to={"/brand/shirt/denim"}>데님</Link>
                                 <a className="dropContent" href="#">스트라이프</a>
                                 <a className="dropContent" href="#">헨리넥/차이나</a>
                             </li>
@@ -132,7 +132,7 @@ class Navigation extends React.Component{
                             <li onClick={this.pageMove}>
                                 <b><a className="dropContent" href="#">바지</a></b>
                                 <Link className="dropContent" to={"/brand/pants/cotton"}>면바지</Link>
-                                <Link className="dropContent" to={"/brand/pants/jeands"}>청바지</Link>
+                                <Link className="dropContent" to={"/brand/pants/jeans"}>청바지</Link>
                                 <Link className="dropContent" to={"/brand/pants/short"}>반바지</Link>
                                 <a className="dropContent" href="#">슬랙스</a>
                                 <a className="dropContent" href="#">트레이닝/조거팬츠</a>

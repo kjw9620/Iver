@@ -9,34 +9,32 @@ footer {
     margin: auto;
 }
 
-.middle {
-    margin: 0 auto;
-}
 
 .footer_sec1 {
     color: white;
     margin: 0;
 }
 
-.footer_sec1 > span {
+.footer_sec1 > h1 {
     font-size: 25px;
     font-weight: 550;
+    margin-right: 40%;
 }
 
 .footer_sec1 > .middle{
+    display: inline-block;
     margin: 0;
-    margin-left: 25%;
 }
 
-.footer_sec1 > .middle > a {
+.footer_sec1 > a {
     margin: auto;
 }
 
-.footer_sec1 > .middle > a > p {
+.footer_sec1 > a > p {
     vertical-align: super;
 }
 
-.footer_sec1 > .middle > a > img {
+.footer_sec1 > a > img {
     width: 18px;
     margin-left: 15px;
     margin-right: 3px;

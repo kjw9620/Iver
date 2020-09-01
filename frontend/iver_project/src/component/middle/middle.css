@@ -1,0 +1,55 @@
+.middle {
+    width: 100%;
+}
+
+.cate-left {
+    display: inline-block;
+    width: 15%;
+}
+
+.cate-title{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;
+    margin: 0;
+}
+
+.cate-default{
+    margin: 0;
+    border-bottom: 1px solid grey;
+    
+}
+
+.cate-default > div{
+    vertical-align: 5px;
+    font-size: 16px;
+    font-weight: 800;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cate-default > div > img{
+    float: right;
+    width: 16px;
+    margin-top: 4px;
+}
+
+.cate-default > ul {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 100px;
+    padding-bottom: 20px;
+}
+
+.cate-default > ul > a{
+    display: inline;
+}
+
+.cate-default > ul > a > li {
+    width: 100%;
+    margin: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}

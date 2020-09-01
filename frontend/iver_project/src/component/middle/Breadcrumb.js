@@ -3,7 +3,22 @@ import './breadcrumb.css'
 
 class Test extends React.Component {
 
+    constructor(props){
+        super(props);
+    }
+
     componentDidMount() {
+        this.propsChange();
+    }
+    
+    componentDidUpdate(prevProps, prevState) {
+        if(this.props.cf !== prevProps.cf
+            || this.props.c !== prevProps.c
+            || this.props.d !== prevProps.d)
+        { this.propsChange(); }
+    }
+
+    propsChange = () => {
         let cf = this.props.cf;
         let c = this.props.c;
         let d = this.props.d;
@@ -16,7 +31,7 @@ class Test extends React.Component {
         switch(c){
             case "outer": c="아우터"; break;
             case "top": c="상의"; break;
-            case "shirts": c="셔츠"; break;
+            case "shirt": c="셔츠"; break;
             case "pants": c="바지"; break;
         }
 

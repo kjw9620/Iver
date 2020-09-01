@@ -21,9 +21,8 @@ class Footer extends React.Component {
             <footer>
                 <div className="frame">
                     <div className="footer_sec1">
-                        <span>고객센터 1234-5678</span>
-    
-                        <span className="middle">
+                        <h1>고객센터 1234-5678</h1>
+
                             <a>
                                 <img src={footer_icon5} alt={footer_icon5}></img>
                                 <p>하이버 소개</p>
@@ -44,7 +43,7 @@ class Footer extends React.Component {
                                 <img src={footer_icon4} alt={footer_icon4}></img>
                                 <p>인스타그램</p>
                             </a>
-                        </span>
+
                     </div>
     
                     <div className="footer_sec2">
