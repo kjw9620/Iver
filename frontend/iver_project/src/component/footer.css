@@ -5,7 +5,7 @@ footer {
 }
 
 .frame {
-    width: 65%;
+    width: 70%;
     margin: auto;
 }
 
@@ -19,7 +19,7 @@ footer {
 }
 
 .footer_sec1 > span {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 550;
 }
 
@@ -37,7 +37,7 @@ footer {
 }
 
 .footer_sec1 > .middle > a > img {
-    width: 30px;
+    width: 18px;
     margin-left: 15px;
     margin-right: 3px;
 }
@@ -73,8 +73,10 @@ footer {
 
 .upBtn {
     cursor: pointer;
-    width: 60px;
+    width: 45px;
     position: fixed;
     bottom: 20px;
     right: 10%;
+
+    border-radius: 5px;
 }

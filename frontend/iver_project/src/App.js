@@ -1,26 +1,33 @@
 import React from 'react'
 import Header from './component/Header'
 import Navigation from './component/Navigation'
-import Slider from './component/Slider'
-import BestProduct from './component/BestProduct'
 import Footer from './component/Footer'
+import Home from './component/home/Home'
+import middle from './component/middle/middle'
+import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom"
 import './App.css'
 
 
-function App() {
+class App extends  React.Component{
 
-  return (
-    <div className="App">
-      <Header/>
-      <Navigation pageMove="홈" className="zIndex_2"/>
-      <Slider/>
-      <BestProduct categori="브랜드"/>
-      <Footer/>
-    </div>
-  );
+  render(){
+    return (
+      <div className="App">
+
+        <Router>
+          <Header/>
+          <Navigation pageMove="홈" className="zIndex_2"/>
+          
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route path="/:classification/:categori/:detail" component={middle}></Route>
+          </Switch>
+          
+          <Footer/>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
-
-
-//12.18.3

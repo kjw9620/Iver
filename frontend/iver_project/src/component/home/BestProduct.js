@@ -1,7 +1,18 @@
 import React from 'react'
 import "./bestProduct.css"
+import axios from 'axios';
 
 class BestProduct extends React.Component{
+
+    componentDidMount() {
+        axios.get('/user?ID=12345')
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
 
     render() {
         return(

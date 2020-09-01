@@ -7,11 +7,13 @@ import footer_icon3 from "../image/icon_footer_03.png"
 import footer_icon4 from "../image/icon_footer_04.png"
 import footer_icon5 from "../image/icon_footer_05.png"
 
+import upBtn from "../image/icons8-up-squared-100.png"
+
 class Footer extends React.Component {
 
     scollTop = () => {
         console.log("scroll Top")
-        window.scrollTo(0, 0);
+        window.scrollTo({top: 0, behavior:"smooth"});
     }
 
     render() {
@@ -67,9 +69,9 @@ class Footer extends React.Component {
                             하이버에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100% 정품입니다.
                         </p>
                     </div>
-    
-                    <img onClick={this.scollTop} className="upBtn" src="https://img.icons8.com/ios/100/000000/up-squared.png" alt="up square png"/>
-    
+
+                    <img onClick={this.scollTop} className="upBtn" src={upBtn} alt="up square png"/>
+
                 </div>
             </footer>
         )

@@ -1,20 +1,29 @@
 import React from 'react';
 import './slider.css'
 
-import banner1 from '../image/bannerImage_1.jpg'
-import banner2 from '../image/bannerImage_2.jpg'
-import banner3 from '../image/bannerImage_3.jpg'
-import banner4 from '../image/bannerImage_4.jpg'
-import banner5 from '../image/bannerImage_5.jpg'
-import banner6 from '../image/bannerImage_6.jpg'
+import banner1 from '../../image/bannerImage_1.jpg'
+import banner2 from '../../image/bannerImage_2.jpg'
+import banner3 from '../../image/bannerImage_3.jpg'
+import banner4 from '../../image/bannerImage_4.jpg'
+import banner5 from '../../image/bannerImage_5.jpg'
+import banner6 from '../../image/bannerImage_6.jpg'
 
 class Slider extends React.Component {
 
     componentDidMount (){
         console.log("this.componentDidMount");
-        this.Interval();
+        // this.Interval();
+
+        this.setState({
+            timer: setInterval(this.Interval, 3000)
+        });
         const dot = document.getElementById('dot');
         dot.childNodes[0].style.backgroundColor = 'red';
+    }
+
+    componentWillUnmount (){
+        console.log("component will unmount!");
+        clearInterval(this.state.timer);
     }
 
     state = {
@@ -27,7 +36,7 @@ class Slider extends React.Component {
     }
 
     Interval = () => {
-        this.state.timer = setTimeout(this.Interval, 3000);
+        // this.state.timer = setTimeout(this.Interval, 3000);
         this.dotMove();
         this.push();
     }
