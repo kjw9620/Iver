@@ -1,0 +1,58 @@
+.content-right {
+    display: inline-block;
+    width: 80%;
+}
+
+.pageTitle {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.list_basic {
+    padding-top: 40px;
+}
+
+.pageTitle > h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.list_head {
+    display: inline-block;
+    width: 100%;
+    min-height: 100px;
+    /* background-color: #e7e7e7; */
+}
+
+.list_subChk {
+    display: inline-block;
+}
+
+.list_subChk > span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    text-align: center;
+
+    margin-right: 5px;
+}
+
+.list_subChk > span > img {
+    margin-top: 11px;
+}
+
+.list_sort {
+    float: right;
+    color: black;
+    
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.list_sort > span {
+    display: inline-block;
+    color: black;
+    font-size: 13px;
+    padding: 5px 10px;
+}

@@ -1,8 +1,10 @@
 import React from 'react'
 import Breadcrumb from './Breadcrumb'
-import './middle.css'
 import { Link } from 'react-router-dom'
 
+import ProductPage from './ProductPage'
+
+import './middle.css'
 import Up from '../../image/icons8-chevron-up-24.png'
 import Down from '../../image/icons8-chevron-down-24.png'
 
@@ -130,9 +132,7 @@ class middle extends React.Component {
                         </h2>
                     </div>
 
-                    <div>
-                        
-                    </div>
+                    <ProductPage/>
 
                 </div>
                 

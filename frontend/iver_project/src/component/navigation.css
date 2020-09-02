@@ -22,7 +22,6 @@
 
 span {
     color: white;
-    display: inline-block;
 }
 
 .gnb:hover {
@@ -40,11 +39,13 @@ span {
     margin-top: 9px;
 }
 
-a{
+.gnb > a{
     display: inline-block;
     writing-mode: none;
-    margin-top: 17px;
+    margin-top: 34px;
     font-size: 13px;
+
+    vertical-align: bottom;
 }
 
 .triangle-up {

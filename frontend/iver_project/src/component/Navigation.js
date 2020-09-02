@@ -48,18 +48,18 @@ class Navigation extends React.Component{
         return(
             <div className="Navigation" onMouseLeave={this.triangle_hidden}>
                 
-                    <li key='홈' className='0 gnb home' onClick={this.pageMove} onMouseEnter={this.triangle_visible}><a>
-                        <Link to="/">
-                            <span>홈</span>
-                            <div style={{visibility: this.state.pageMove=="홈"? "visible" : "hidden" }} className='status'></div>
-                        </Link>
-                    </a></li>
-                
-                    <li key='브랜드' className='1 gnb brand' onClick={this.pageMove} onMouseEnter={this.triangle_visible}><a className='1'>
-                            <span>브랜드</span>
-                            <div style={{visibility: this.state.pageMove=="브랜드"? "visible" : "hidden" }} className='1 status'></div>
-                            <div style={{visibility: this.state.onMouse == 1 ? "visible":"hidden"}} className='1 triangle-up'></div>
-                    </a></li>
+                <li key='홈' className='0 gnb home' onClick={this.pageMove} onMouseEnter={this.triangle_visible}><a>
+                    <Link to="/">
+                        <span>홈</span>
+                        <div style={{visibility: this.state.pageMove=="홈"? "visible" : "hidden" }} className='status'></div>
+                    </Link>
+                </a></li>
+            
+                <li key='브랜드' className='1 gnb brand' onClick={this.pageMove} onMouseEnter={this.triangle_visible}><a className='1'>
+                        <span>브랜드</span>
+                        <div style={{visibility: this.state.pageMove=="브랜드"? "visible" : "hidden" }} className='1 status'></div>
+                        <div style={{visibility: this.state.onMouse == 1 ? "visible":"hidden"}} className='1 triangle-up'></div>
+                </a></li>
                 
 
                 <li key='쇼핑몰' className='2 gnb shopping' onClick={this.pageMove} onMouseEnter={this.triangle_visible}><a className="2">
