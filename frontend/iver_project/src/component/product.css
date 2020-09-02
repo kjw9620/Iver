@@ -1,0 +1,13 @@
+.product_Main {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(100px, auto));
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.product_Main > a > ul {
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+}

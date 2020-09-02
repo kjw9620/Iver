@@ -28,6 +28,7 @@ footer {
 
 .footer_sec1 > a {
     margin: auto;
+    font-size: small;
 }
 
 .footer_sec1 > a > p {
