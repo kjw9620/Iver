@@ -1,0 +1,175 @@
+.detail_main{
+    display: inline-block;
+    width: 100%;
+}
+
+.detail_info{
+    display: block;
+    padding: 80px 0;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1300px;
+}
+
+.detail_pic {
+    float: left;
+    width: 45%;
+}
+
+.detail_pic > img{
+    width: 100%;
+}
+
+.detail_basic {
+    float: right;
+    width: 52%;
+    margin-left: 3%;
+    min-height: 600px;
+}
+
+.detail_header {
+    border-top: 2px solid black;
+    padding: 20px;
+}
+
+.detail_header > h1{
+    margin-top: 0;
+}
+
+.detail_price {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.detail_content {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px;
+}
+
+.detail_content > div:not(.detail_certification){
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.detail_content span {
+    float: right;
+    color: black;
+    font-weight: 550;
+}
+
+.detail_deliver > span{
+    font-size: 13px;
+    color: red;
+    font-weight: 600;
+}
+
+.detail_point > span {
+    float: right;
+}
+
+.detail_couponLink {
+    display: block;
+    float: right;
+}
+
+.detail_couponLink > a {
+    color: white;
+    font-size: smaller;
+    background-color: black;
+    padding: 5px 10px;
+}
+
+.detail_couponLink > a:last-child {
+    margin-left: 1px;
+}
+
+.detail_couponLink > a > img {
+    width: 16px;
+    cursor: pointer;
+}
+
+.detail_certification > span > img {
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.certification {
+    background-color: #f2f2f2;
+
+    margin: 25px 0;
+    padding: 32px 42px;
+}
+
+.certification_title {
+    margin-bottom: 15px;
+}
+
+.certification_title > img {
+    width: 90px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+.certification_title > span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+    float: none;
+    margin-left: 2%;
+
+}
+
+.detail_option {
+    padding: 20px;
+}
+
+.detail_option > .option-btn-1, .detail_option > .option-btn-2 {
+    display: inline-block;
+    width: 96%;
+    color: black;
+    border: 1px solid black;
+    padding: 12px;
+}
+
+.detail_option > .option-btn-1 > span , .detail_option > .option-btn-2  > span {
+    display: inline-block;
+    width: 97%;
+    color: black;
+    font-size: 14px;
+}
+
+.detail_option > .option-btn-2{
+    margin-top: 20px;
+}
+
+.detail_option > ul {
+    display: inline-block;
+    width: auto;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #c5c5c5;
+    border-top: 0px;
+}
+
+.menu-item > div{
+    padding: 10px;
+    font-size: 14px;
+}
+
+.active:hover {
+    background-color: #f6f6f6;
+    border: 1px solid #c5c5c5;
+    cursor: pointer;
+}
+
+.option-btn-2.inactive {
+    cursor: default;
+    border: 1px solid #c5c5c5;
+}
+
+.option-btn-2.inactive > span {
+    color: #c5c5c5;
+}

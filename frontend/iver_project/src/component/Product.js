@@ -9,36 +9,36 @@ class Product extends React.Component {
         
         return(
             <div className="product_Main">
-                <Link to="/"><ul>
-                    <li className="list_image"><img className="image" src="https://image.brandi.me/cproduct/2018/12/20/6648788_1545292189_image1_L.jpg"/></li>
+                <Link to="/product"><ul>
+                    <li className="list_image"><img className="image" src="https://image.brandi.me/cproduct/2020/03/06/14353239_1583482999_image1_L.jpg"/></li>
                     <li className="list_seller">카네브로스</li>
                     <li className="list_title">[CB] 오버 더블 후드 트...</li>
                     <li className="list_price">169,200</li>
                 </ul></Link>
 
                 <Link to="/"><ul>
-                    <li className="list_image"><img className="image" src="https://image.brandi.me/cproduct/2018/12/20/6648788_1545292189_image1_L.jpg"/></li>
+                    <li className="list_image"><img className="image" src="https://image.brandi.me/cproduct/2020/03/06/14353239_1583482999_image1_L.jpg"/></li>
                     <li className="list_seller">카네브로스</li>
                     <li className="list_title">[CB] 오버 더블 후드 트...</li>
                     <li className="list_price">169,200</li>
                 </ul></Link>
 
                 <Link to="/"><ul>
-                    <li className="list_image"><img className="image" src="https://image.brandi.me/cproduct/2018/12/20/6648788_1545292189_image1_L.jpg"/></li>
+                    <li className="list_image"><img className="image" src="https://image.brandi.me/cproduct/2020/03/06/14353239_1583482999_image1_L.jpg"/></li>
                     <li className="list_seller">카네브로스</li>
                     <li className="list_title">[CB] 오버 더블 후드 트...</li>
                     <li className="list_price">169,200</li>
                 </ul></Link>
 
                 <Link to="/"><ul>
-                    <li className="list_image"><img className="image" src="https://image.brandi.me/cproduct/2018/12/20/6648788_1545292189_image1_L.jpg"/></li>
+                    <li className="list_image"><img className="image" src="https://image.brandi.me/cproduct/2020/03/06/14353239_1583482999_image1_L.jpg"/></li>
                     <li className="list_seller">카네브로스</li>
                     <li className="list_title">[CB] 오버 더블 후드 트...</li>
                     <li className="list_price">169,200</li>
                 </ul></Link>
 
                 <Link to="/"><ul>
-                    <li className="list_image"><img className="image" src="https://image.brandi.me/cproduct/2018/12/20/6648788_1545292189_image1_L.jpg"/></li>
+                    <li className="list_image"><img className="image" src="https://image.brandi.me/cproduct/2020/03/06/14353239_1583482999_image1_L.jpg"/></li>
                     <li className="list_seller">카네브로스</li>
                     <li className="list_title">[CB] 오버 더블 후드 트...</li>
                     <li className="list_price">169,200</li>
