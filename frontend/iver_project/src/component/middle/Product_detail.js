@@ -5,6 +5,8 @@ import arrow_wh from '../../image/arrow-wh-down.png'
 import upBtn from '../../image/arrow-up.png'
 import DownBtn from '../../image/arrow-down.png'
 import Iver_logo from '../../image/Iver_Logo_v2.PNG'
+import plus_btn from '../../image/plus@3x.png'
+import minus_btn from '../../image/minus@3x.png'
 
 class Product_detail extends React.Component{
 
@@ -14,7 +16,12 @@ class Product_detail extends React.Component{
         op_drop_2: false,
         option_Btn1_clicked: false,
         option1_value:"[ 사이즈 ]를 선택하세요.",
-        option2_value:"[ 컬러 ]를 선택하세요."
+        option2_value:"[ 컬러 ]를 선택하세요.",
+        option_list:[
+            ["Black","L",1],
+            ["Black","M",1]
+        ],
+        default_price: "169200"
     }
 
     select_option = (pos,option) => {
@@ -125,10 +132,27 @@ class Product_detail extends React.Component{
                                 <li className="menu-item" onClick={() => {this.select_option(2,"green")}}><div>green</div></li>
                                 <li className="menu-item" onClick={() => {this.select_option(2,"blue")}}><div>blue</div></li>
                             </ul>
-
-                            {this.state.option1_value+ ", " +this.state.option2_value}
                         </div>
 
+                        <div className="detail_footer">
+                            {this.state.option_list.map(e => {
+                                return (
+                                    <div className="detail_select_option">
+                                        <span>{e[0]} / {e[1]}</span>
+                                        <span className="delete_btn">X</span>
+                                        <span className="price_text">
+                                            {this.state.default_price * e[2]}
+                                        </span>
+                                        
+                                        <div className="qty-btn">
+                                            <img src={plus_btn} alt="plus Btn"></img>
+                                            <div className="input-num">{e[2]}</div>
+                                            <img src={minus_btn} alt="minus Btn"></img>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -141,7 +141,7 @@
 }
 
 .detail_option > .option-btn-2{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .detail_option > ul {
@@ -172,4 +172,63 @@
 
 .option-btn-2.inactive > span {
     color: #c5c5c5;
+}
+
+.detail_footer {
+    padding: 10px 20px 20px 20px;
+}
+
+.detail_select_option {
+    display: block;
+    height: 30px;
+    padding:20px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.detail_select_option > span:first-child{
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.qty-btn {
+    display: block;
+    float: right;
+}
+
+.qty-btn > img {
+    height: 30px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.input-num {
+    display: inline-block;
+    width: 30px;
+    height: 28px;
+    border-top: solid 1px #bdbdbd !important;
+    border-bottom: solid 1px #bdbdbd !important;
+    vertical-align: middle;
+    text-align: center;
+    line-height:28px;
+    font-size: 13px;
+}
+
+.price_text {
+    color: black;
+    font-weight: 300;
+    margin-top: 3px;
+    margin-left: 15px;
+    font-size: 16px;
+    float: right;
+}
+
+.delete_btn {
+    margin-top: 2px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: black;
+    float:right;
 }
