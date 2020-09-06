@@ -15,25 +15,40 @@ class Product_detail extends React.Component{
         op_drop_1: false,
         op_drop_2: false,
         option_Btn1_clicked: false,
-        option1_value:"[ 사이즈 ]를 선택하세요.",
-        option2_value:"[ 컬러 ]를 선택하세요.",
-        option_list:[
-            ["Black","L",1],
-            ["Black","M",1]
+        option_value: [
+            "[ 사이즈 ]를 선택하세요.",
+            "[ 컬러 ]를 선택하세요."
         ],
+        test_defualt_val1:"[ 사이즈 ]를 선택하세요." ,
+        test_defualt_val2:"[ 컬러 ]를 선택하세요.",
+        option_list:[],
         default_price: "169200"
+    }
+
+    componentDidUpdate() {
+        console.log(this.state.option_list[0]);
     }
 
     select_option = (pos,option) => {
 
-
-        if(pos==1){ this.setState({ option1_value:option }); }
-        else if(pos==2){ this.setState({ option2_value:option }); }
+        if(pos==1){
+            this.setState({
+                option_value: [option, this.state.option_value[1]],
+                option_Btn1_clicked:true
+            });
+        }
+        else if(pos==2){
+            this.setState({
+                option_List: this.state.option_list.push([this.state.option_value[0],option,1]),
+                option_value: [this.state.test_defualt_val1,this.state.test_defualt_val2],
+                option_Btn1_clicked: false
+            }); 
+        
+        }
 
         this.setState({
             op_drop_1:false,
             op_drop_2: false,
-            option_Btn1_clicked:true
         });
     }
 
@@ -55,6 +70,28 @@ class Product_detail extends React.Component{
     cBtn_click = () => {
         this.setState({
             cBtn_Toggle: !this.state.cBtn_Toggle
+        });
+    }
+
+    plus_btn_click = (e) => {
+        if(e[2] < 20){
+            this.setState({
+                option_list: this.state.option_list.map(item => item === e ? [e[0],e[1],e[2]+1] : item)
+            });
+        }
+    }
+
+    minus_btn_click = (e) => {
+        if(e[2] > 1){
+            this.setState({
+                option_list: this.state.option_list.map(item => item === e ? [e[0],e[1],e[2]-1] : item)
+            });
+        }
+    }
+
+    del_option_ele = (e) => {
+        this.setState({
+           option_list: this.state.option_list.filter(ele => ele !== e)
         });
     }
 
@@ -111,7 +148,7 @@ class Product_detail extends React.Component{
 
                         <div className="detail_option">
                             <span className="option-btn-1 active" onClick={() => {this.dBtn_Toggle(1)}}>
-                                <span>{this.state.option1_value}</span>
+                                <span>{this.state.option_value[0]}</span>
                                 <img src={DownBtn}></img>
                             </span>
                             <ul className="option-menu-1" style={{display: this.state.op_drop_1 === true ? "block" : "none"}}>
@@ -123,7 +160,7 @@ class Product_detail extends React.Component{
                             
                             {/*  */}
                             <span className={this.state.option_Btn1_clicked === false ? "option-btn-2 inactive" : "option-btn-2 active" } onClick={() => {this.dBtn_Toggle(2)}}>
-                                <span>{this.state.option2_value}</span>
+                                <span>{this.state.option_value[1]}</span>
                                 <img src={DownBtn}></img>
                             </span>
                             <ul className="option-menu-2" style={{display: this.state.op_drop_2 === true ? "block" : "none"}}>
@@ -139,15 +176,15 @@ class Product_detail extends React.Component{
                                 return (
                                     <div className="detail_select_option">
                                         <span>{e[0]} / {e[1]}</span>
-                                        <span className="delete_btn">X</span>
+                                        <span onClick={()=>this.del_option_ele(e)} className="delete_btn">X</span>
                                         <span className="price_text">
                                             {this.state.default_price * e[2]}
                                         </span>
                                         
                                         <div className="qty-btn">
-                                            <img src={plus_btn} alt="plus Btn"></img>
+                                            <img onClick={()=>this.minus_btn_click(e)} src={minus_btn} alt="minus Btn"></img>
                                             <div className="input-num">{e[2]}</div>
-                                            <img src={minus_btn} alt="minus Btn"></img>
+                                            <img onClick={()=>this.plus_btn_click(e)} src={plus_btn} alt="plus Btn"></img>
                                         </div>
                                     </div>
                                 )
