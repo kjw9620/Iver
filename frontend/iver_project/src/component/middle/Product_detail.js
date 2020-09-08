@@ -1,12 +1,17 @@
 import React from "react"
 import './product_detail.css'
 
+import { Link } from "react-router-dom"
+
 import arrow_wh from '../../image/arrow-wh-down.png'
 import upBtn from '../../image/arrow-up.png'
 import DownBtn from '../../image/arrow-down.png'
 import Iver_logo from '../../image/Iver_Logo_v2.PNG'
 import plus_btn from '../../image/plus@3x.png'
 import minus_btn from '../../image/minus@3x.png'
+import favor_btn from '../../image/btn-heart.png'
+
+let sum=0;
 
 class Product_detail extends React.Component{
 
@@ -22,11 +27,23 @@ class Product_detail extends React.Component{
         test_defualt_val1:"[ 사이즈 ]를 선택하세요." ,
         test_defualt_val2:"[ 컬러 ]를 선택하세요.",
         option_list:[],
-        default_price: "169200"
+        default_price: "169200",
+        sumOf_price: 0
     }
 
     componentDidUpdate() {
-        console.log(this.state.option_list[0]);
+        
+        let sum=0;
+        this.state.option_list.map(e => {
+            sum+=e[2]*this.state.default_price;
+        });
+
+        console.log(sum);
+        console.log(this.state.sumOf_price);
+
+        if(sum != this.state.sumOf_price){
+            this.setState({ sumOf_price: sum });
+        }
     }
 
     select_option = (pos,option) => {
@@ -189,6 +206,31 @@ class Product_detail extends React.Component{
                                     </div>
                                 )
                             })}
+
+                            <div className="detail_price_calc">
+                                <span>총 {this.state.option_list.length}개의 상품</span>
+                                총 금액
+                                <b>{ this.state.sumOf_price } 원</b>
+                            </div>
+                            
+                            <div className="detail_btn">
+                                <Link className="b1" to="/">
+                                    <div>
+                                        장바구니 담기
+                                    </div>
+                                </Link>
+
+                                <Link className="b2" to="/">
+                                    <div>
+                                        바로 구매하기
+                                    </div>
+                                </Link>
+
+                                <div className="btn_favor">
+                                    <img src={favor_btn} alt="btn_favor.png"></img>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

@@ -226,9 +226,74 @@
 }
 
 .delete_btn {
+    cursor: pointer;
     margin-top: 2px;
     font-weight: bold;
     margin-left: 10px;
     color: black;
     float:right;
+}
+
+.detail_price_calc {
+    font-size: 20px;
+    height: 30px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 25px;
+}
+
+.detail_price_calc > span{
+    color: #bdbdbd;
+    float: left;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.detail_price_calc > b {
+    color: red;
+    margin-left: 10px;
+}
+
+.detail_btn {
+    display: flex;
+    margin-top: 25px;
+    height: 60px;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.detail_btn > .b1 {
+    width: 45%;
+    color: white;
+    background-color: #727272;
+    border-radius: 3px;
+}
+
+.detail_btn > .b2 {
+    width: 45%;
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+}
+
+.detail_btn > a > div {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 18px;
+}
+
+.detail_btn > .btn_favor {
+    cursor: pointer;
+    background-color: #bababa;
+    border-radius: 3px;
+    width: 60px;
+    height: 60px;
+}
+
+.detail_btn > .btn_favor > img {
+    margin-left: 25%;
+    margin-top: 25%;
+    width: 50%;
+    height: 50%;
 }
