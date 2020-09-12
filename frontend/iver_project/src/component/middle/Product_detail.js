@@ -1,7 +1,7 @@
 import React from "react"
 import './product_detail.css'
 
-import { Link } from "react-router-dom"
+import { Link, Route } from "react-router-dom"
 
 import arrow_wh from '../../image/arrow-wh-down.png'
 import upBtn from '../../image/arrow-up.png'
@@ -10,10 +10,13 @@ import Iver_logo from '../../image/Iver_Logo_v2.PNG'
 import plus_btn from '../../image/plus@3x.png'
 import minus_btn from '../../image/minus@3x.png'
 import favor_btn from '../../image/btn-heart.png'
+import DetailTab from './DetailTab'
 
-let sum=0;
+String.prototype.replaceAll = function(org, dest) {
+    return this.split(org).join(dest);
+}
 
-class Product_detail extends React.Component{
+class Product_detail extends React.Component{       
 
     state = {
         cBtn_Toggle: false,
@@ -28,7 +31,12 @@ class Product_detail extends React.Component{
         test_defualt_val2:"[ 컬러 ]를 선택하세요.",
         option_list:[],
         default_price: "169200",
-        sumOf_price: 0
+        sumOf_price: 0,
+        tab_pos:1,
+        tab_ck_style: {
+            border: "1px solid black",
+            borderBottom: "0px"
+        }
     }
 
     componentDidUpdate() {
@@ -37,9 +45,6 @@ class Product_detail extends React.Component{
         this.state.option_list.map(e => {
             sum+=e[2]*this.state.default_price;
         });
-
-        console.log(sum);
-        console.log(this.state.sumOf_price);
 
         if(sum != this.state.sumOf_price){
             this.setState({ sumOf_price: sum });
@@ -112,19 +117,25 @@ class Product_detail extends React.Component{
         });
     }
 
+    tab_clicked = (pos) => {
+        if(this.state.tab_pos !== pos){
+            this.setState({ tab_pos: pos });
+        }
+    }
+
     render (){
         
         return(
             <div className="detail_main">
                 <div className="detail_info">
                     <div className="detail_pic">
-                        <img src={"https://image.brandi.me/cproduct/2020/03/06/14353239_1583482999_image1_L.jpg"}></img>
+                        <img src={"https://image.brandi.me/cproduct/2020/09/01/19045620_1598960574_image1_L.jpg"}></img>
                     </div>
                     <div className="detail_basic">
                         <div className="detail_header">
-                            <h1>[CB] 오버 더블 후드 트렌치코트_BK</h1>
+                            <h1>미니멀 히든 맥코트 그레이베이지</h1>
                             <div className="detail_price">
-                                169,200
+                                119,200
                             </div>
                         </div>
                         <div className="detail_content">
@@ -234,6 +245,35 @@ class Product_detail extends React.Component{
                         </div>
                     </div>
                 </div>
+
+                <div className="detail_tab">
+                    <Link to={this.props.match.path+"/tab1"}>
+                        <div style={this.state.tab_pos === 1 ? this.state.tab_ck_style : {} } onClick={()=>{this.tab_clicked(1)}} className="tab_default">
+                            상품정보
+                        </div>
+                    </Link>
+                    <Link to={this.props.match.path+"/tab2"}>
+                        <div style={this.state.tab_pos === 2 ? this.state.tab_ck_style : {} } onClick={()=>{this.tab_clicked(2)}} className="tab_default">
+                            리뷰 <span>0</span>
+                        </div>
+                    </Link>
+                    <Link to={this.props.match.path+"/tab3"}>
+                        <div style={this.state.tab_pos === 3 ? this.state.tab_ck_style : {} } onClick={()=>{this.tab_clicked(3)}} className="tab_default">
+                            Q&A <span>0</span>
+                        </div>
+                    </Link>
+                    <Link to={this.props.match.path+"/tab4"}>
+                        <div style={this.state.tab_pos === 4 ? this.state.tab_ck_style : {} } onClick={()=>{this.tab_clicked(4)}} className="tab_default">
+                            주문정보
+                        </div>
+                    </Link>
+                </div>
+                
+                <switch>
+                    <Route exact path={this.props.match.path} component={DetailTab}></Route>
+                    <Route exact path={this.props.match.path+"/:tab"} component={DetailTab}></Route>
+                </switch>
+                
             </div>
         )
     }

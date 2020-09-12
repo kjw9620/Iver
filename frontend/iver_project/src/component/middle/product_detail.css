@@ -4,7 +4,7 @@
 }
 
 .detail_info{
-    display: block;
+    display: flex;
     padding: 80px 0;
     margin: 0 auto;
     width: 80%;
@@ -296,4 +296,30 @@
     margin-top: 25%;
     width: 50%;
     height: 50%;
+}
+
+.detail_tab {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1300px;
+}
+.detail_tab > a { width: 25%; }
+
+.detail_tab > a > div{
+    border: 1px solid #dadada;
+    border-bottom: 1px solid black;
+    border-right: none;
+}
+
+.detail_tab > a:last-child > div {
+    border: 1px solid #dadada;
+    border-bottom: 1px solid black;
+}
+
+.tab_default {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
 }

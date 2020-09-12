@@ -21,9 +21,9 @@ class App extends  React.Component{
           
           <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route exact path="/product" component={Product_detail}></Route>
-            <Route path="/:classification/:categori/:detail" component={middle}></Route>
+            <Route path="/product" component={Product_detail}></Route>
           </Switch>
+          <Route path="/:classification/:categori/:detail" component={middle}></Route>
           
           <Footer/>
         </Router>

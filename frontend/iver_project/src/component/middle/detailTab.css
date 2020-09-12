@@ -1,0 +1,59 @@
+.default_frame {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1300px;
+}
+
+.default_frame > div{
+    text-align: center;
+}
+
+.tab2 {
+    display: inline-block;
+    width: 100%;
+}
+
+.filter {
+    text-align: right;
+    margin-top: 45px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.filter > span{
+    color: #888;
+    padding: 0 20px;
+    border-left: 1px solid #c5c5c5;
+    font-weight: bold;
+}
+.filter > span:first-child{ border-left: none; }
+.filter > span:last-child{ padding-right: 0; }
+
+.filter > span > img {
+    width: 20px;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+}
+
+.tab2 > div:not(.filter) {
+    display: inline-block;
+    max-height: max-content;
+    width: 100%;
+}
+
+.tab2 > div:not(.filter) > h3 {
+    text-align: left;
+}
+
+.tab2 > div:not(.filter) > p {
+    display: inline-block;
+    width: 100%;
+    padding: 60px 0;
+    margin: 0;
+}
+
+.tab2 > div:not(.filter) > h3 > span {
+    color: #8d8d8d;
+    margin-left: 6px;
+}
