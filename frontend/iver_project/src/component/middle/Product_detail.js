@@ -39,6 +39,10 @@ class Product_detail extends React.Component{
         }
     }
 
+    componentDidMount() {
+        window.scrollTo({top: 0});
+    }
+
     componentDidUpdate() {
         
         let sum=0;

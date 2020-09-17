@@ -1,3 +1,9 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
 .Navigation {
     display: inline-block;
     width: 100%;
@@ -5,12 +11,14 @@
     margin: 0px;
     background-color: black;
 
+    max-width: 1000px;
+
     text-align: center;
 }
 
 .gnb {
     display: inline-block;
-    width: 10%;
+    width: 14%;
     height: 90px;
     text-align: center;
     vertical-align: middle;
@@ -65,6 +73,8 @@ span {
 
 .dropDownMenu {
     position: absolute;
+
+    left: 0;
 
     background-color: white;
 

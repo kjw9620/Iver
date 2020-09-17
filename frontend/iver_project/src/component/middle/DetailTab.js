@@ -87,8 +87,11 @@ class DetailTab extends React.Component {
 
     tab3 = () => {
         return (
-            <div>
-                tab3 test case
+            <div className="tab3">
+                <div className="tab3_title">
+                    <div>Q&A<span>0</span></div>
+                    <span>문의 내용 작성</span>
+                </div>
             </div>
         )
     }
