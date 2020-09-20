@@ -28,7 +28,7 @@
 
 }
 
-span {
+.gnb span {
     color: white;
 }
 
@@ -73,13 +73,21 @@ span {
 
 .dropDownMenu {
     position: absolute;
-
     left: 0;
-
     background-color: white;
-
     opacity: 90%;
+    z-index: 3;
+    width: 100%;
+    height: fit-content;
+    min-height: 100px;
+}
 
+.dropDownMenu_m {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: white;
+    opacity: 90%;
     z-index: 3;
     width: 100%;
     height: fit-content;
@@ -97,6 +105,7 @@ span {
 }
 
 .dropForm {
+    display: inline-block;
     width: 150px;
     height: auto;
 }
@@ -113,8 +122,13 @@ span {
     display: flex;
     cursor: auto;
 
-    width: fit-content;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+ul {
+    float: left;
+    padding: 0;
 }
 
 .drop-shopping {
@@ -140,8 +154,22 @@ li{
 .verticalLine {
     border-right: 1px solid black;
 
+    margin-left: 10%;
     margin-right: 8%;
 }
 
 a:link { color: black;text-decoration: none;}
 a:visited { color: black; text-decoration: none;}
+
+
+@media only screen and (max-width: 768px) {
+    .Navigation { height: 60px; }
+    .gnb { height: 60px; width: 20%; }
+    .gnb > a { margin-top: 20px; }
+    .gnb span { font-size: 1px; }
+    .triangle-up { display: none; }
+    .gnb.event, .gnb.store { display: none; }
+    .dropDownMenu { display: none; }
+    .dropDownMenu_m { display: block; }
+    .drop-brand > div > ul { width: 100%; }
+}
