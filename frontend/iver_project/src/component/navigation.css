@@ -51,7 +51,7 @@
     display: inline-block;
     writing-mode: none;
     margin-top: 34px;
-    font-size: 13px;
+    font-size: 13px;    
 
     vertical-align: bottom;
 }
@@ -80,6 +80,15 @@
     width: 100%;
     height: fit-content;
     min-height: 100px;
+    box-shadow: 0px 3px 5px gray;
+}
+
+.dropDownMenu > .drop-brand > ul > li > a { font-size: 12px; color: grey; font-weight: 900; }
+.dropDownMenu > .drop-brand > ul > li > a:first-child { font-size: 15px; color: black; font-weight: 900; }
+.dropDownMenu > .drop-brand > ul:first-child > li > a {
+    font-size: 15px;
+    font-weight: 900;
+    color: black;
 }
 
 .dropDownMenu_m {
@@ -98,11 +107,13 @@
     display: block;
     cursor: pointer;
     margin: 0;
-    padding: 10px 10px;
     text-align: left;
     font-size: 14px;
     font-weight: 900;
 }
+
+.dropContent:first-child { padding: 10px 5px; }
+.dropContent { padding: 6px 5px; }
 
 .dropForm {
     display: inline-block;
@@ -115,6 +126,10 @@
 }
 
 .dropDownMenu:hover {
+    visibility:  visible;
+}
+
+.dropDownMenu_m:hover {
     visibility:  visible;
 }
 
@@ -166,10 +181,20 @@ a:visited { color: black; text-decoration: none;}
     .Navigation { height: 60px; }
     .gnb { height: 60px; width: 20%; }
     .gnb > a { margin-top: 20px; }
-    .gnb span { font-size: 1px; }
+    .gnb span { font-size: 11px; }
     .triangle-up { display: none; }
     .gnb.event, .gnb.store { display: none; }
+
     .dropDownMenu { display: none; }
-    .dropDownMenu_m { display: block; }
-    .drop-brand > div > ul { width: 100%; }
+    .dropDownMenu_m { display: block; box-shadow: 5px 5px 5px gray;}
+    .dropDownMenu_m a { font-size: 11px; }
+    .drop-brand { display: block; margin: 0 20px; }
+    .drop-brand > div:first-child { width: 100%; height: 50px; border-bottom: 1.5px solid black; }
+    .drop-brand > div:first-child a { display: inline-block; width: 40px; font-size: 11px; font-weight: 800; }
+    .dropForm { width: 100%; }
+    .dropDownMenu_m > ul > .dropForm {width: 50px;}
+    .dropDownMenu_m > .drop-brand > ul { display:inline-block; width: 130px; }
+    .dropDownMenu_m > .drop-brand > ul a { padding-top: 0; }
+    .dropDownMenu_m > .drop-brand > ul a:first-child { font-size: 13px; font-weight: bold; color: black;}
+    .dropDownMenu_m > .drop-brand > ul a { color: grey; }   
 }
